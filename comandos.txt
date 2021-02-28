@@ -1,0 +1,35 @@
+************** ANOTAÇÕES **************
+
+file = File.read("2020.csv")
+file.gsub!('"', "'")
+arr_of_arrs = CSV.parse(file)
+arr_of_arrs.each{ |x| p x }
+
+
+**************** MODELS ****************
+
+# rails generate model estado sgUf:string nome:text
+
+rails generate model partido sgPartido:string nome:string
+
+rails generate model fornecedor txtCnpjCpf:string txtFornecedor:string
+
+rails generate model subCota numSubCota:integer txtDescricao:string numEspecificacaoSubCota:integer
+
+rails generate model tipoDocumento codigo:integer descricao:varchar
+
+rails generate model documento urlDocumento:string ideDocumento:integer nuDeputadoId:integer txtNumero:string vlrDocumento:decimal datEmissao:datetime tipoDocumentoId:integer
+
+rails generate model parlamentar ideCadastro:integer cpf:string txNomeParlamentar:string partidoId:integer
+
+rails generate model legislatura codLegislatura:integer nuLegislatura:integer nuCarteiraParlamentar:integer parlamentarId:integer estadoId:integer
+
+rails generate model despesa numRessarcimento:integer vlrRestituicao:decimal numLote:integer txtPassageiro:string txtTrecho:string numParcela:string numAno:integer numMes:integer vlrLiquido:decimal vlrGlosa:decimal legislaturaId:integer fornecedorId:integer subCotaId:integer documentoId:integer
+
+rails generate model despesaDetalhamento txtDescricaoEspecificacao:string despesaId:integer
+
+
+
+
+
+ price:decimal seller_id:integer email:string img_url:string
