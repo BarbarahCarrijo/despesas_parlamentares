@@ -1,4 +1,8 @@
-************** ANOTAÇÕES **************
+**************** GERAR PROJETO ****************
+
+rails new parlamentares_despesas -T -d postgresql -m https://raw.githubusercontent.com/excid3/jumpstart/master/template.rb
+
+**************** ANOTAÇÕES ****************
 
 file = File.read("2020.csv")
 file.gsub!('"', "'")
@@ -28,8 +32,3 @@ rails generate model despesa numRessarcimento:integer vlrRestituicao:decimal num
 
 rails generate model despesaDetalhamento txtDescricaoEspecificacao:string despesaId:integer
 
-
-
-
-
- price:decimal seller_id:integer email:string img_url:string
