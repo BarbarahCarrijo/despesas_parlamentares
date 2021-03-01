@@ -16,25 +16,25 @@ arr_of_arrs.each{ |x| p x }
 
 **************** MODELS ****************
 
-rails generate model principal/estado sg_uf:string nome:text
+rails generate model estado sg_uf:string nome:text
 
-rails generate model principal/partido sg_partido:string nome:string
+rails generate model partido sg_partido:string nome:string
 
-rails generate model principal/fornecedor txt_cnpj_cpf:string txt_fornecedor:string
+rails generate model fornecedor txt_cnpj_cpf:string txt_fornecedor:string
 
-rails generate model principal/sub_cota num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer
+rails generate model sub_cota num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer
 
-rails generate model principal/tipo_documento codigo:integer descricao:string
+rails generate model tipo_documento codigo:integer descricao:string
 
-rails generate model principal/documento url_documento:string ide_documento:integer nu_deputado_id:integer txt_numero:string vlr_documento:decimal dat_emissao:datetime tipo_documento_id:integer
+rails generate model documento url_documento:string ide_documento:integer nu_deputado_id:integer txt_numero:string vlr_documento:decimal dat_emissao:datetime tipo_documento_id:integer
 
-rails generate model principal/parlamentar ide_cadastro:integer cpf:string tx_nome_parlamentar:string partido_id:integer
+rails generate model parlamentar ide_cadastro:integer cpf:string tx_nome_parlamentar:string partido_id:integer
 
-rails generate model principal/legislatura cod_legislatura:integer nu_legislatura:integer nu_carteira_parlamentar:integer parlamentar_id:integer estado_id:integer
+rails generate model legislatura cod_legislatura:integer nu_legislatura:integer nu_carteira_parlamentar:integer parlamentar_id:integer estado_id:integer
 
-rails generate model principal/despesa num_ressarcimento:integer vlr_restituicao:decimal num_lote:integer txt_passageiro:string txt_trecho:string num_parcela:string num_ano:integer num_mes:integer vlr_liquido:decimal vlr_glosa:decimal legislatura_id:integer fornecedor_id:integer sub_cota_id:integer documento_id:integer
+rails generate model despesa num_ressarcimento:integer vlr_restituicao:decimal num_lote:integer txt_passageiro:string txt_trecho:string num_parcela:string num_ano:integer num_mes:integer vlr_liquido:decimal vlr_glosa:decimal legislatura_id:integer fornecedor_id:integer sub_cota_id:integer documento_id:integer
 
-rails generate model principal/despesa_detalhamento txt_descricao_especificacao:string despesa_id:integer
+rails generate model despesa_detalhamento txt_descricao_especificacao:string despesa_id:integer
 
 
 **************** GEMS ****************
