@@ -1,6 +1,10 @@
-**************** GERAR PROJETO ****************
+**************** COMANDOS ****************
 
 rails new mapeamento_despesas_parlamentares -T -d postgresql -m https://raw.githubusercontent.com/excid3/jumpstart/master/template.rb
+
+rails routes | grep home
+
+sudo service postgresql restart
 
 **************** ANOTAÇÕES ****************
 
