@@ -24,7 +24,7 @@ rails generate model fornecedor txt_cnpj_cpf:string txt_fornecedor:string
 
 rails generate model sub_cota num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer
 
-rails generate model tipo_documento codigo:integer descricao:varchar
+rails generate model tipo_documento codigo:integer descricao:string
 
 rails generate model documento url_documento:string ide_documento:integer nu_deputado_id:integer txt_numero:string vlr_documento:decimal dat_emissao:datetime tipo_documento_id:integer
 
