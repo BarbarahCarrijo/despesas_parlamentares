@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_174640) do
+ActiveRecord::Schema.define(version: 2021_03_03_180318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_174640) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "documentos", force: :cascade do |t|
+  create_table "planilhas", force: :cascade do |t|
     t.string "tx_nome_parlamentar"
     t.string "cpf"
     t.integer "ide_cadastro"
@@ -68,15 +68,17 @@ ActiveRecord::Schema.define(version: 2021_03_03_174640) do
     t.integer "nu_deputado_id"
     t.integer "ide_documento"
     t.string "url_documento"
+    t.integer "referencia_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "referencia", force: :cascade do |t|
+  create_table "referencias", force: :cascade do |t|
     t.string "referencia"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "planilhas", "referencias"
 end

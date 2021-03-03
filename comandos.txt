@@ -4,13 +4,13 @@ rails new despesas_parlamentares
 
 sudo service postgresql restart
 
-rails routes | grep home
+rails routes | grep admin
 
 rails generate trestle:install
 
 rails active_storage:install
 
-rails generate trestle:resource DocOriginal
+rails generate trestle:resource Referencia
 
 **************** ANOTAÇÕES ****************
 
@@ -22,35 +22,31 @@ arr_of_arrs.each{ |x| p x }
 
 **************** MODELS ****************
 
-rails generate model estado sg_uf:string nome:text
+rails generate model referencia referencia:string
 
-rails generate model partido sg_partido:string nome:string
+# rails generate model estado sg_uf:string nome:text
 
-rails generate model fornecedor txt_cnpj_cpf:string txt_fornecedor:string
+# rails generate model partido sg_partido:string nome:string
 
-rails generate model sub_cota num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer
+# rails generate model fornecedor txt_cnpj_cpf:string txt_fornecedor:string
 
-rails generate model tipo_documento codigo:integer descricao:string
+# rails generate model sub_cota num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer
 
-rails generate model documento url_documento:string ide_documento:integer nu_deputado_id:integer txt_numero:string vlr_documento:decimal dat_emissao:datetime tipo_documento_id:integer
+# rails generate model tipo_documento codigo:integer descricao:string
 
-rails generate model parlamentar ide_cadastro:integer cpf:string tx_nome_parlamentar:string partido_id:integer
+# rails generate model documento url_documento:string ide_documento:integer nu_deputado_id:integer txt_numero:string vlr_documento:decimal dat_emissao:datetime tipo_documento_id:integer
 
-rails generate model legislatura cod_legislatura:integer nu_legislatura:integer nu_carteira_parlamentar:integer parlamentar_id:integer estado_id:integer
+# rails generate model parlamentar ide_cadastro:integer cpf:string tx_nome_parlamentar:string partido_id:integer
 
-rails generate model despesa num_ressarcimento:integer vlr_restituicao:decimal num_lote:integer txt_passageiro:string txt_trecho:string num_parcela:string num_ano:integer num_mes:integer vlr_liquido:decimal vlr_glosa:decimal legislatura_id:integer fornecedor_id:integer sub_cota_id:integer documento_id:integer
+# rails generate model legislatura cod_legislatura:integer nu_legislatura:integer nu_carteira_parlamentar:integer parlamentar_id:integer estado_id:integer
 
-rails generate model despesa_detalhamento txt_descricao_especificacao:string despesa_id:integer
+# rails generate model despesa num_ressarcimento:integer vlr_restituicao:decimal num_lote:integer txt_passageiro:string txt_trecho:string num_parcela:string num_ano:integer num_mes:integer vlr_liquido:decimal vlr_glosa:decimal legislatura_id:integer fornecedor_id:integer sub_cota_id:integer documento_id:integer
 
-rails g model documento tx_nome_parlamentar:string cpf:string ide_cadastro:integer nu_carteira_parlamentar:integer nu_legislatura:integer sg_uf:string sg_partido:string cod_legislatura:integer num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer txt_descricao_especificacao:string txt_fornecedor:string txt_cnpj_cpf:string txt_numero:string ind_tipo_documento:integer dat_emissao:datetime vlr_documento:double vlr_glosa:double vlr_liquido:double num_mes:integer num_ano:integer num_parcela:string txt_passageiro:string txt_trecho:string num_lote:integer num_ressarcimento:integer vlr_restituicao:double nu_deputado_id:integer ide_documento:integer url_documento:string
+# rails generate model despesa_detalhamento txt_descricao_especificacao:string despesa_id:integer
+
+# rails g model planilha tx_nome_parlamentar:string cpf:string ide_cadastro:integer nu_carteira_parlamentar:integer nu_legislatura:integer sg_uf:string sg_partido:string cod_legislatura:integer num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer txt_descricao_especificacao:string txt_fornecedor:string txt_cnpj_cpf:string txt_numero:string ind_tipo_documento:integer dat_emissao:datetime vlr_documento:double vlr_glosa:double vlr_liquido:double num_mes:integer num_ano:integer num_parcela:string txt_passageiro:string txt_trecho:string num_lote:integer num_ressarcimento:integer vlr_restituicao:double nu_deputado_id:integer ide_documento:integer url_documento:string referencia:references
 
 **************** GEMS ****************
 
-gem install puma -v '5.2.1' --source 'https://rubygems.org/'
-gem install pg -v '1.2.3' --source 'https://rubygems.org/'
-gem install unf_ext -v '0.0.7.7' --source 'https://rubygems.org/'
-gem install byebug -v '11.1.3' --source 'https://rubygems.org/'
-gem install msgpack -v '1.4.2' --source 'https://rubygems.org/'
-gem install bindex -v '0.8.1' --source 'https://rubygems.org/'
-gem install bcrypt -v '3.1.16' --source 'https://rubygems.org/'
-gem install ffi -v '1.14.2' --source 'https://rubygems.org/'
+gem 'csv'
+gem 'trestle'

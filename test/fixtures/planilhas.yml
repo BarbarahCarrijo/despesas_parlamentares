@@ -17,7 +17,7 @@ one:
   txt_cnpj_cpf: MyString
   txt_numero: MyString
   ind_tipo_documento: 1
-  dat_emissao: 2021-03-03 12:52:36
+  dat_emissao: 2021-03-03 14:03:18
   vlr_documento: 
   vlr_glosa: 
   vlr_liquido: 
@@ -32,6 +32,7 @@ one:
   nu_deputado_id: 1
   ide_documento: 1
   url_documento: MyString
+  referencia: one
 
 two:
   tx_nome_parlamentar: MyString
@@ -50,7 +51,7 @@ two:
   txt_cnpj_cpf: MyString
   txt_numero: MyString
   ind_tipo_documento: 1
-  dat_emissao: 2021-03-03 12:52:36
+  dat_emissao: 2021-03-03 14:03:18
   vlr_documento: 
   vlr_glosa: 
   vlr_liquido: 
@@ -65,3 +66,4 @@ two:
   nu_deputado_id: 1
   ide_documento: 1
   url_documento: MyString
+  referencia: two

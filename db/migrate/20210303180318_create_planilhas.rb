@@ -32,8 +32,10 @@ class CreatePlanilhas < ActiveRecord::Migration[5.2]
       t.integer :nu_deputado_id
       t.integer :ide_documento
       t.string :url_documento
+      t.integer :referencia_id
 
       t.timestamps
     end
+    add_foreign_key :planilhas, :referencias, column: :referencia_id
   end
 end
