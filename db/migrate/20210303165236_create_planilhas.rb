@@ -1,6 +1,6 @@
-class CreateDocumentos < ActiveRecord::Migration[5.2]
+class CreatePlanilhas < ActiveRecord::Migration[5.2]
   def change
-    create_table :documentos do |t|
+    create_table :planilhas do |t|
       t.string :tx_nome_parlamentar
       t.string :cpf
       t.integer :ide_cadastro

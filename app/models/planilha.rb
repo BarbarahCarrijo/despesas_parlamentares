@@ -1,0 +1,2 @@
+class Planilha < ApplicationRecord
+end
