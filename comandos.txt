@@ -38,6 +38,7 @@ rails generate model despesa num_ressarcimento:integer vlr_restituicao:decimal n
 
 rails generate model despesa_detalhamento txt_descricao_especificacao:string despesa_id:integer
 
+rails g model documento tx_nome_parlamentar:string cpf:string ide_cadastro:integer nu_carteira_parlamentar:integer nu_legislatura:integer sg_uf:string sg_partido:string cod_legislatura:integer num_sub_cota:integer txt_descricao:string num_especificacao_sub_cota:integer txt_descricao_especificacao:string txt_fornecedor:string txt_cnpj_cpf:string txt_numero:string ind_tipo_documento:integer dat_emissao:datetime vlr_documento:double vlr_glosa:double vlr_liquido:double num_mes:integer num_ano:integer num_parcela:string txt_passageiro:string txt_trecho:string num_lote:integer num_ressarcimento:integer vlr_restituicao:double nu_deputado_id:integer ide_documento:integer url_documento:string
 
 **************** GEMS ****************
 

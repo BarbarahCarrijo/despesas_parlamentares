@@ -1,0 +1,67 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tx_nome_parlamentar: MyString
+  cpf: MyString
+  ide_cadastro: 1
+  nu_carteira_parlamentar: 1
+  nu_legislatura: 1
+  sg_uf: MyString
+  sg_partido: MyString
+  cod_legislatura: 1
+  num_sub_cota: 1
+  txt_descricao: MyString
+  num_especificacao_sub_cota: 1
+  txt_descricao_especificacao: MyString
+  txt_fornecedor: MyString
+  txt_cnpj_cpf: MyString
+  txt_numero: MyString
+  ind_tipo_documento: 1
+  dat_emissao: 2021-03-03 12:52:36
+  vlr_documento: 
+  vlr_glosa: 
+  vlr_liquido: 
+  num_mes: 1
+  num_ano: 1
+  num_parcela: MyString
+  txt_passageiro: MyString
+  txt_trecho: MyString
+  num_lote: 1
+  num_ressarcimento: 1
+  vlr_restituicao: 
+  nu_deputado_id: 1
+  ide_documento: 1
+  url_documento: MyString
+
+two:
+  tx_nome_parlamentar: MyString
+  cpf: MyString
+  ide_cadastro: 1
+  nu_carteira_parlamentar: 1
+  nu_legislatura: 1
+  sg_uf: MyString
+  sg_partido: MyString
+  cod_legislatura: 1
+  num_sub_cota: 1
+  txt_descricao: MyString
+  num_especificacao_sub_cota: 1
+  txt_descricao_especificacao: MyString
+  txt_fornecedor: MyString
+  txt_cnpj_cpf: MyString
+  txt_numero: MyString
+  ind_tipo_documento: 1
+  dat_emissao: 2021-03-03 12:52:36
+  vlr_documento: 
+  vlr_glosa: 
+  vlr_liquido: 
+  num_mes: 1
+  num_ano: 1
+  num_parcela: MyString
+  txt_passageiro: MyString
+  txt_trecho: MyString
+  num_lote: 1
+  num_ressarcimento: 1
+  vlr_restituicao: 
+  nu_deputado_id: 1
+  ide_documento: 1
+  url_documento: MyString
