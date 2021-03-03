@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_165910) do
+ActiveRecord::Schema.define(version: 2021_03_03_174640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,12 @@ ActiveRecord::Schema.define(version: 2021_03_03_165910) do
     t.integer "nu_deputado_id"
     t.integer "ide_documento"
     t.string "url_documento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "referencia", force: :cascade do |t|
+    t.string "referencia"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
