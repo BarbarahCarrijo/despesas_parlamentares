@@ -1,12 +1,16 @@
 **************** COMANDOS ****************
 
-rails new desp_parlamentares -T -d postgresql -m https://raw.githubusercontent.com/excid3/jumpstart/master/template.rb
+rails new despesas_parlamentares
 
-rails generate scaffold importacao --skip-migration
+sudo service postgresql restart
 
 rails routes | grep home
 
-sudo service postgresql restart
+rails generate trestle:install
+
+rails active_storage:install
+
+rails generate trestle:resource DocOriginal
 
 **************** ANOTAÇÕES ****************
 
